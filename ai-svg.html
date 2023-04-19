@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      circle {
+        animation: move 2s ease-in-out alternate infinite;
+      }
+
+      @keyframes move {
+        from {
+          transform: translate(40%, -40%);
+        }
+        to {
+          transform: translate(-40%, 40%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg viewbox="-50 -50 100 100" width="200" height="200">
+      <circle cx="0" cy="0" r="20" fill="blue" />
+    </svg>
+  </body>
+  <script>
+    function createArray(num) {
+      let arr = [];
+
+      if (num < 10) {
+        arr = [1];
+      } else {
+        for (let i = 1; i <= Math.floor(num / 10); i++) {
+          for (let j = 1; j <= i; j++) {
+            arr.push(j);
+          }
+        }
+        for (let i = 1; i <= num % 10; i++) {
+          arr.push(i);
+        }
+      }
+
+      return arr;
+    }
+    console.log(createArray(13));
+  </script>
+</html>

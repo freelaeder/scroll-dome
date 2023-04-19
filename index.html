@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>json转化成html标签</h1>
+  </body>
+  <script>
+    //
+
+    const data =
+      '[{"num":"A","text":"<input type="checkbox" /><label>记住我</label>"},{"num":"B","text":"<input type="checkbox" /><label for="checkbox">记住我</label>"},{"num":"C","text":"<input type="checkbox" id="c1" /><label>记住我</label>"},{"num":"D","text":"<input type="checkbox" id="c1" /><label for="c1">记住我</label>"}]'
+
+        .replace(/="/g, "='")
+        .replace(/n"/g, "n'")
+        .replace(/x"/g, "x'");
+
+    console.log(newData);
+    console.log(JSON.parse(newData));
+
+    //     export function transJsonSpecialchar(jsonStr){
+    // if (jsonStr &Object.prototype.toString.call(jsonStr)=="[object String]"&&jsonstr !'null'){
+    // jsonstr jsonStr.replace(/\r/g,"\\r");
+    // jsonstr jsonstr.replace(/\n/g,"\\n");
+    // jsonstrjsonstr.replace(/\t/g,"\\t");
+    // jsonstr jsonStr.replace(/\/g,"\\\\")
+    // jsonstr jsonstr.replace(/"\[{/g,"[{")
+    // jsonstr jsonstr.replace(/}]"/g,"}]")
+    // jsonstr jsonstr.replace(/"{"/g,"{\"")
+    // jsonstr jsonstr.replace(/")"/g,"\"}")
+    // jsonStr=jsonstr.replace(/】"/g,"】");
+    // /eslint-disable-next-line no-useless-escape
+    // jsonStr jsonstr.replace(/\'/g,"&#39;");
+    // jsonstr jsonStr.replace(//g,"&nbsp;");
+    // jsonstr
+    // jsonstr.replace(/</g,"slt;");
+    // jsonstr jsonstr.replace(/>/g,"Sgt;");
+    // return jsonstr;
+  </script>
+</html>
