@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // for (let i = 1; i <= 3; i++) {
+      //   setTimeout(() => {
+      //     console.log(i);
+      //   }, 0);
+      // }
+      // 1 2 3
+
+      // for (var i = 1; i <= 3; i++) {
+      //   setTimeout(() => {
+      //     console.log(i);
+      //   }, 0);
+      // }
+      // 3个 4
+
+      // var a = 100;
+      // function print(fn) {
+      //   var a = 200;
+      //   fn();
+      // }
+      // function fn() {
+      //   console.log(a);
+      // }
+      // print(fn);
+      // 100
+
+      // console.log(a); // undefined
+      // var a = 12;
+      // function fn() {
+      //   console.log(a); // undefined
+      //   var a = 13;
+      // }
+      // fn();
+      // console.log(a); // 12
+
+      // console.log(a); // undefined
+      // var a = 12;
+      // function fn() {
+      //   console.log(a); // 12
+      //   a = 13;
+      // }
+      // fn();
+      // console.log(a); // 13
+
+      // console.log(a);
+      // a = 12;
+      // function fn() {
+      //   console.log(a);
+      //   a = 13;
+      // }
+      // fn();
+      // console.log(a);
+      /** 
+       * 域.html:54 Uncaught ReferenceError: a is not defined
+    at 作用域.html:54:19
+（
+      */
+
+      // var foo = 1;
+      // function bar() {
+      //   if (!foo) {
+      //     var foo = 10;
+      //   }
+      //   console.log(foo);
+      // }
+      // bar(); // 10
+      // var foo = 1;
+      // function bar() {
+      //   // 不管条件是否成立都会进行变量提升 var foo = undefined;
+      //   // if (!undefined) => 将 undefined 转换为布尔值再取反 !false => true
+      //   if (!foo) {
+      //     var foo = 10;
+      //   }
+      //   console.log(foo);
+      // }
+      // bar();
+
+      var a = 10,
+        b = 11,
+        c = 13;
+
+      function test(a) {
+        a = 1;
+        var b = 2;
+        c = 3;
+      }
+
+      test(10);
+
+      console.log(a); // 10
+      console.log(b); // 11
+      console.log(c); //3
+    </script>
+  </body>
+</html>
