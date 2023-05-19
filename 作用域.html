@@ -84,21 +84,41 @@
       // }
       // bar();
 
-      var a = 10,
-        b = 11,
-        c = 13;
+      // var a = 10,
+      //   b = 11,
+      //   c = 13;
 
-      function test(a) {
-        a = 1;
-        var b = 2;
-        c = 3;
-      }
+      // function test(a) {
+      //   a = 1;
+      //   var b = 2;
+      //   c = 3;
+      // }
 
-      test(10);
+      // test(10);
 
-      console.log(a); // 10
-      console.log(b); // 11
-      console.log(c); //3
+      // console.log(a); // 10
+      // console.log(b); // 11
+      // console.log(c); //3
+
+      // var a = 4;
+
+      // function b(x, y, a) {
+      //   console.log(a);
+      //   // 在 JS 非严格模式下实参集合与形参变量存在映射关系, 严格模式下该关系比切断了
+      //   arguments[2] = 10;
+      //   console.log(a);
+      // }
+
+      // a = b(1, 2, 3);
+      // console.log(a);
+
+      var foo = "hello";
+      (function (foo) {
+        console.log(foo);
+        var foo = foo || "world";
+        console.log(foo);
+      })(foo);
+      console.log(foo);
     </script>
   </body>
 </html>

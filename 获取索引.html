@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="ul">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ul>
+    <script>
+      // 获取 ul
+      var ul = document.getElementById("ul");
+      // 获取 ul 的所有子元素
+      var lis = ul.children;
+      // 获取 ul 子元素的个数
+      var length = lis.length;
+      // 遍历所有 li
+      // for (var i = 0; i < length; i++) {
+      //   // 为 li 添加点击事件
+      //   lis[i].onclick = function () {
+      //     // 弹出 i 的值
+      //     alert(i);
+      //   };
+      // }
+
+      // for (let i = 0; i < length; i++) {
+      //   // 为 li 添加点击事件
+      //   lis[i].onclick = function () {
+      //     // 弹出 i 的值
+      //     alert(i);
+      //   };
+      // }
+
+      for (var i = 0; i < length; i++) {
+        (function (item) {
+          lis[item].onclick = function () {
+            alert(item);
+          };
+        })(i);
+      }
+    </script>
+  </body>
+</html>
